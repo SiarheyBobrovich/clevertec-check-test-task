@@ -1,6 +1,7 @@
 package ru.clevertec.check.config;
 
 import ru.clevertec.check.controller.MainOrderController;
+import ru.clevertec.check.dto.CommandLineArgumentContainer;
 import ru.clevertec.check.factory.CheckFactory;
 import ru.clevertec.check.factory.impl.CheckFactoryImpl;
 import ru.clevertec.check.mapper.ArgMapper;
@@ -26,18 +27,17 @@ public class ApplicationBuilder {
 
     private final MainOrderProcessor mainOrderProcessor;
 
-    private ApplicationBuilder() {
+    private ApplicationBuilder(String readFromFilePath, String saveToFilePath) {
         ArgMapper argMapper = new ArgMapper();
         PrintService printService = new PrintServiceImpl();
 
-        ProductRepository productRepository = RepositoryConfig.getProductRepository(
-                "C:\\prog\\check-without-gradle\\src\\resources\\products.csv");
+        ProductRepository productRepository = RepositoryConfig.getProductRepository(readFromFilePath);
         DiscountCardRepository discountCardRepository = RepositoryConfig.getDiscountCardRepository(
-                "C:\\prog\\check-without-gradle\\src\\resources\\discountCards.csv");
+                ".\\src\\resources\\discountCards.csv");
 
         MainOrderController mainOrderController = getMainOrderController(discountCardRepository, productRepository);
 
-        mainOrderProcessor = new MainOrderProcessorImpl(argMapper, printService, mainOrderController, new ValidatorImpl());
+        mainOrderProcessor = new MainOrderProcessorImpl(argMapper, printService, mainOrderController, new ValidatorImpl(), saveToFilePath);
     }
 
     private MainOrderController getMainOrderController(DiscountCardRepository discountCardRepository, ProductRepository productRepository) {
@@ -52,6 +52,10 @@ public class ApplicationBuilder {
     }
 
     public static void run(String[] args) {
-        new ApplicationBuilder().mainOrderProcessor.processOrder(args);
+        CommandLineArgumentContainer commandLineArgumentContainer = CommandLineArgumentResolver.splitArgs(args);
+        ApplicationBuilder applicationBuilder = new ApplicationBuilder(
+                commandLineArgumentContainer.getReadFromFilePath(), commandLineArgumentContainer.getSaveToFilePath());
+
+        applicationBuilder.mainOrderProcessor.processOrder(commandLineArgumentContainer.getAppArguments());
     }
 }

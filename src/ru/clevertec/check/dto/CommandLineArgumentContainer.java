@@ -4,5 +4,6 @@ public interface CommandLineArgumentContainer {
 
     String[] getAppArguments();
 
-    String[] getSpringArguments();
+    String getReadFromFilePath();
+    String getSaveToFilePath();
 }
