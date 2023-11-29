@@ -31,9 +31,9 @@ public class ApplicationBuilder {
         PrintService printService = new PrintServiceImpl();
 
         ProductRepository productRepository = RepositoryConfig.getProductRepository(
-                "C:\\prog\\check-without-gradle\\src\\resources\\products.csv");
+                ".\\src\\resources\\products.csv");
         DiscountCardRepository discountCardRepository = RepositoryConfig.getDiscountCardRepository(
-                "C:\\prog\\check-without-gradle\\src\\resources\\discountCards.csv");
+                ".\\src\\resources\\discountCards.csv");
 
         MainOrderController mainOrderController = getMainOrderController(discountCardRepository, productRepository);
 
