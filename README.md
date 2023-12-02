@@ -27,10 +27,6 @@
     В  наборе параметров должна быть минимум одна такая связка "id-quantity"
     Обязательно нужно передать баланс дебитовой карты
 
-Пример:
-
-    java ̺ -jar clevertec-check.jar ̺3-1 ̺ 2-5 ̺ 5-1 ̺ discountCard=1111 ̺ balanceDebitCard=100
-
 # Команды для запуска:
 
 - java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01
