@@ -27,37 +27,37 @@
 
 ### Build
 
-    javac -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java
+    javac -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java
 
 ### Run:
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 20-10 10-2 14-43 discountCard=1111 balanceDebitCard=225.98 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 20-10 10-2 14-43 discountCard=1111 balanceDebitCard=225.98 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=3333 balanceDebitCard=62.41 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=3333 balanceDebitCard=62.41 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 20-20 1-10 discountCard=9999 balanceDebitCard=346.55 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 20-20 1-10 discountCard=9999 balanceDebitCard=346.55 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 5-2 7-1 12-14 balanceDebitCard=155.66 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 5-2 7-1 12-14 balanceDebitCard=155.66 pathToFile=./src/main/resources/products.csv saveToFile=./result_file.csv
 
 ## Ошибки:
 
 Не достаточно средств (NOT ENOUGH MONEY):
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
 
 Не передан баланс карты (BAD REQUEST):
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
 
 Не достаточно средств (NOT ENOUGH MONEY):
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 discountCard=1111 balanceDebitCard=0 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 discountCard=1111 balanceDebitCard=0 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
 
 Не передано ни одного продукта (BAD REQUEST):
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java discountCard=1111 balanceDebitCard=1000 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java discountCard=1111 balanceDebitCard=1000 pathToFile=./src/main/resources/products.csv saveToFile=./error_file.csv
 
 ## Таблица 1. Список доступных goods
 

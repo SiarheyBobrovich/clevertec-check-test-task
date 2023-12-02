@@ -33,7 +33,7 @@ public class ApplicationBuilder {
 
         ProductRepository productRepository = RepositoryConfig.getProductRepository(readFromFilePath);
         DiscountCardRepository discountCardRepository = RepositoryConfig.getDiscountCardRepository(
-                ".\\src\\main\\resources\\discountCards.csv");
+                "./src/main/resources/discountCards.csv");
 
         MainOrderController mainOrderController = getMainOrderController(discountCardRepository, productRepository);
 

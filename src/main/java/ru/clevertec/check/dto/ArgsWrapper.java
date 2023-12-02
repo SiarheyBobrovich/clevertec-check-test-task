@@ -29,11 +29,11 @@ public class ArgsWrapper implements CommandLineArgumentContainer {
 
     @Override
     public String getReadFromFilePath() {
-        return properties.getOrDefault(READ_FROM_FILE_PATH, ".\\src\\main\\resources\\products.csv");
+        return properties.getOrDefault(READ_FROM_FILE_PATH, "./src/main/resources/products.csv");
     }
 
     @Override
     public String getSaveToFilePath() {
-        return properties.getOrDefault(SAVE_TO_FILE_PATH, ".\\result.csv");
+        return properties.getOrDefault(SAVE_TO_FILE_PATH, "./result.csv");
     }
 }
