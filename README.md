@@ -4,17 +4,17 @@
 
 ## Build
 
-    javac -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java
+    javac -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java
 
 ## Run
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01
 
 ## Описание
 
 Консольное приложение, реализующее функционал формирования чека в магазине запускается с помощью консольной команды:
 
-    java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java id-quantity discountCard=xxxx balanceDebitCard=xxxx
+    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java id-quantity discountCard=xxxx balanceDebitCard=xxxx
 
     id					    - идентификатор товара (целое)
     quantity 				- количество товара (целое)
@@ -33,10 +33,10 @@
 
 # Команды для запуска:
 
-- java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01
-- java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 1-4 10-2 14-43 discountCard=3333 balanceDebitCard=61.71
-- java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 20-20 1-10 discountCard=9999 balanceDebitCard=346.55
-- java -cp src .\src\main\java\ru\clevertec\check\CheckRunner.java 5-2 7-1 12-14 balanceDebitCard=155.66
+- java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 1-4 10-2 14-43 discountCard=1111 balanceDebitCard=63.01
+- java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-4 10-2 14-43 discountCard=3333 balanceDebitCard=61.71
+- java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 20-20 1-10 discountCard=9999 balanceDebitCard=346.55
+- java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 5-2 7-1 12-14 balanceDebitCard=155.66
 
 # Команды для запуска с ошибками:
 

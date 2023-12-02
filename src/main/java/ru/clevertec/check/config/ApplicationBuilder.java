@@ -31,9 +31,9 @@ public class ApplicationBuilder {
         PrintService printService = new PrintServiceImpl();
 
         ProductRepository productRepository = RepositoryConfig.getProductRepository(
-                ".\\src\\main\\java\\resources\\products.csv");
+                "./src/main/resources/products.csv");
         DiscountCardRepository discountCardRepository = RepositoryConfig.getDiscountCardRepository(
-                ".\\src\\main\\java\\resources\\discountCards.csv");
+                "./src/main/resources/discountCards.csv");
 
         MainOrderController mainOrderController = getMainOrderController(discountCardRepository, productRepository);
 
